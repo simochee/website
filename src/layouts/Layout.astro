@@ -1,0 +1,19 @@
+---
+import Head from "#components/Head.astro";
+import { type InferProps } from '#utils/types'
+
+type Props = InferProps<typeof Head>;
+
+const { ...headProps } = Astro.props;
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <Head {...headProps} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

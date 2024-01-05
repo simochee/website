@@ -1,0 +1,18 @@
+---
+type Props = {
+  title: string;
+  titleTemplate?: (title: string) => string;
+};
+
+const { title, titleTemplate = (title) => `${title} | simochee.net` } = Astro.props;
+---
+
+<title>{titleTemplate(title)}</title>
+<meta name="generator" content={Astro.generator} />
+<meta name="twitter:title" content={title} />
+<meta property="og:title" content={title} />
+<meta property="og:image" content={new URL('ogp.png', Astro.url).href} />
+<meta property="og:site_name" content={import.meta.env.ASTRO_SITE_NAME} />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ja_JP" />
