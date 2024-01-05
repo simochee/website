@@ -1,0 +1,4 @@
+plugins:
+  - prettier-plugin-astro
+  - prettier-plugin-packagejson
+  - prettier-plugin-organize-imports

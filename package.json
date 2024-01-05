@@ -1,11 +1,18 @@
 {
-  "packageManager": "pnpm@8.14.0+sha256.9cebf61abd83f68177b29484da72da9751390eaad46dfc3072d266bfbb1ba7bf",
   "type": "module",
   "scripts": {
+    "build": "astro build",
     "dev": "astro dev",
-    "build": "astro build"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "astro": "^4.1.0"
-  }
+  },
+  "devDependencies": {
+    "prettier": "^3.1.1",
+    "prettier-plugin-astro": "^0.12.3",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "prettier-plugin-packagejson": "^2.4.8"
+  },
+  "packageManager": "pnpm@8.14.0+sha256.9cebf61abd83f68177b29484da72da9751390eaad46dfc3072d266bfbb1ba7bf"
 }
