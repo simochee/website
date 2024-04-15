@@ -6,12 +6,15 @@
     "node": "20.12.2"
   },
   "scripts": {
-    "postinstall": "lefthook install"
+    "postinstall": "lefthook install",
+    "dev": "astro dev"
   },
   "devDependencies": {
+    "@astrojs/cloudflare": "^10.1.0",
     "@biomejs/biome": "^1.6.4",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
+    "astro": "^4.6.1",
     "lefthook": "^1.6.10"
   }
 }
