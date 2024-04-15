@@ -4,5 +4,14 @@
   "packageManager": "pnpm@9.0.0-rc.2+sha256.56c6fdb47aaccbd84f172f5dd032820ad8ba66aeb4727832fb3158f8537f11cd",
   "volta": {
     "node": "20.12.2"
+  },
+  "scripts": {
+    "postinstall": "lefthook install"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.4",
+    "@commitlint/cli": "^19.2.2",
+    "@commitlint/config-conventional": "^19.2.2",
+    "lefthook": "^1.6.10"
   }
 }
