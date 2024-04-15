@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@9.0.0-rc.2+sha256.56c6fdb47aaccbd84f172f5dd032820ad8ba66aeb4727832fb3158f8537f11cd",
+  "volta": {
+    "node": "20.12.2"
+  }
+}
