@@ -1,0 +1,75 @@
+<div class="prose"><slot /></div>
+
+<style>
+  .prose {
+    @apply break-words tracking-wide;
+
+    :global(h1, h2, h3, h4, h5) {
+      @apply font-medium leading-relaxed md:font-normal md:leading-normal;
+    }
+    
+    :global(h1) {
+      @apply mt-16 mb-6 text-3xl md:text-4xl;
+    }
+
+    :global(h2) {
+      @apply mt-16 mb-6 text-2xl md:text-3xl;
+    }
+
+    :global(h3) {
+      @apply mt-10 mb-6 text-xl md:text-2xl;
+    }
+
+    :global(h4) {
+      @apply mt-10 mb-6 text-lg md:text-xl;
+    }
+
+    :global(h5) {
+      @apply mt-6 mb-4 text-base md:text-lg;
+    }
+
+    :global(p) {
+      @apply mb-2 leading-relaxed;
+    }
+
+    :global(b) {
+      @apply font-bold;
+    }
+
+    :global(a) {
+      @apply text-sea-800 underline hover:no-underline hover:text-sea-900 active:text-sea-900;
+    }
+
+    :global(blockquote) {
+      @apply border-l-4 border-wood-600 px-5 py-2 my-6 text-sumi-700;
+    }
+
+    :global(blockquote > p:last-child) {
+      @apply mb-0;
+    }
+    
+    :global(:where(p, li) > code) {
+      @apply bg-sumi-100 rounded-sm px-2 py-1 font-mono;
+    }
+
+    :global(ul, ol) {
+      @apply space-y-1 mb-2 pl-4;
+    }
+
+    :global(li > :where(ul, ol)) {
+      @apply mb-0;
+    }
+
+    :global(ul) {
+      @apply list-disc;
+    }
+
+    :global(ol) {
+      @apply list-decimal;
+    }
+
+    :global(li > ol) {
+      @apply list-[lower-alpha];
+    }
+  }
+</style>

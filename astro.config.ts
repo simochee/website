@@ -6,7 +6,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig({
   output: 'server',
   adapter: cloudflare(),
-  integrations: [tailwind()],
+  integrations: [tailwind({ nesting: true })],
   vite: {
     plugins: [tsconfigPaths()],
   },
