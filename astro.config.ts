@@ -1,18 +1,14 @@
-import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
-import tailwindcss from '@tailwindcss/vite'
+import tailwind from '@astrojs/tailwind';
+import { defineConfig } from 'astro/config';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   output: 'server',
   adapter: cloudflare(),
+  integrations: [tailwind()],
   vite: {
-    css: {
-      transformer: 'lightningcss'
-    },
-    build: {
-      cssMinify: 'lightningcss'
-    },
-    plugins: [tailwindcss()]
+    plugins: [tsconfigPaths()],
   },
   image: {
     service: {
