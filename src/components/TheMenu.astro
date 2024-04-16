@@ -1,0 +1,35 @@
+---
+const MENU_LINKS = [
+  {
+    title: 'プロフィール',
+    href: '/',
+    icon: 'icon-[carbon--haze-night]',
+    activated: () => Astro.url.pathname === '/',
+  },
+  {
+    title: 'ブログ',
+    href: '/blog/',
+    icon: 'icon-[carbon--blog]',
+    activated: () => Astro.url.pathname.startsWith('/blog/'),
+  }
+] satisfies Array<{
+  title: string;
+  href: string;
+  icon: string;
+  activated: () => boolean;
+}>;
+---
+
+<nav class="bg-sumi-50 rounded-sm p-3">
+  <div class="grid gap-4">
+    {MENU_LINKS.map(({ title, href, icon, activated }) => (
+      <a href={href} class:list={[
+        'flex items-center justify-start gap-3 rounded px-4 py-3 leading-none',
+        activated() ?'bg-sea-50 text-sea-900 font-bold': 'hover:underline hover:bg-sumi-100'
+      ]}>
+      <span class={`h-5 w-5 ${icon}`} />
+        {title}
+        </a>
+    ))}
+  </div>
+</nav>

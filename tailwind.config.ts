@@ -1,3 +1,6 @@
+import { family as IBMPlexMono } from '@fontsource/ibm-plex-mono/metadata.json';
+import { family as IBMPlexSansJP } from '@fontsource/ibm-plex-sans-jp/metadata.json';
+import { addDynamicIconSelectors } from '@iconify/tailwind'
 import type { Config } from 'tailwindcss'
 
 export default {
@@ -81,8 +84,17 @@ export default {
         100: '#ffc8b8',
         50: '#ffe7e6',
       },
+    },
+    fontFamily: {
+      body: [IBMPlexSansJP, 'sans-serif'],
+      mono: [IBMPlexMono, 'monospace']
+    },
+    fontWeight: {
+      regular: '400',
+      medium: '500',
+      bold: '700',
     }
   },
-  plugins: [],
+  plugins: [addDynamicIconSelectors()],
 } satisfies Config
 

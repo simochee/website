@@ -30,6 +30,12 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^19.2.2
         version: 19.2.2
+      '@iconify-json/carbon':
+        specifier: ^1.1.31
+        version: 1.1.31
+      '@iconify/tailwind':
+        specifier: ^0.1.4
+        version: 0.1.4
       astro:
         specifier: ^4.6.1
         version: 4.6.1(@types/node@20.12.7)(lightningcss@1.24.1)(typescript@5.4.5)
@@ -783,6 +789,15 @@ packages:
 
   '@fontsource/ibm-plex-sans-jp@5.0.12':
     resolution: {integrity: sha512-EW3mK0GFtP6xPXuRCCxrBtE+mtPX02dl5EKxL21Yw9K4o7Wy6/+50zjk3OXGDCRnUR4SiEtpUT37gHDpIaineg==}
+
+  '@iconify-json/carbon@1.1.31':
+    resolution: {integrity: sha512-CAvECFfiwGyZmlcuM2JLMRDEN3VsIEZv6lml7Xf+3giQ5oXloADm0b5wiVPFZmONKM5jXERmx+E7YSvAtFJIbw==}
+
+  '@iconify/tailwind@0.1.4':
+    resolution: {integrity: sha512-U7RzcU2fkwOfMDsGQ3mtpLIaApSnqb+vgcJJknPPbg8/NF5s7tI1o5otEMfcpnLGk4PbYB8bxmKTz7IJVUlU2Q==}
+
+  '@iconify/types@2.0.0':
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -3563,6 +3578,16 @@ snapshots:
   '@fontsource/ibm-plex-mono@5.0.12': {}
 
   '@fontsource/ibm-plex-sans-jp@5.0.12': {}
+
+  '@iconify-json/carbon@1.1.31':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify/tailwind@0.1.4':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify/types@2.0.0': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:

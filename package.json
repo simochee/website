@@ -16,6 +16,8 @@
     "@biomejs/biome": "^1.6.4",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
+    "@iconify-json/carbon": "^1.1.31",
+    "@iconify/tailwind": "^0.1.4",
     "astro": "^4.6.1",
     "lefthook": "^1.6.10",
     "tailwindcss": "^3.4.3",
