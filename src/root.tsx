@@ -5,6 +5,8 @@ import {
 	ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
 import RouterHead from "~components/RouterHead";
+import "@fontsource/ibm-plex-sans-jp";
+import "@fontsource/ibm-plex-mono";
 import "~global.css";
 
 export default component$(() => {
@@ -14,7 +16,7 @@ export default component$(() => {
 				<meta charSet="utf-8" />
 				<RouterHead />
 			</head>
-			<body>
+			<body class="bg-white font-sans">
 				<RouterOutlet />
 				<ServiceWorkerRegister />
 			</body>
