@@ -32,6 +32,12 @@ importers:
       '@fontsource/ibm-plex-sans-jp':
         specifier: ^5.0.13
         version: 5.0.13
+      '@iconify-json/carbon':
+        specifier: ^1.1.34
+        version: 1.1.34
+      '@iconify/tailwind':
+        specifier: ^1.1.1
+        version: 1.1.1
       '@tailwindcss/typography':
         specifier: ^0.5.13
         version: 0.5.13(tailwindcss@3.3.3)
@@ -550,6 +556,15 @@ packages:
 
   '@fontsource/ibm-plex-sans-jp@5.0.13':
     resolution: {integrity: sha512-4G1X0hvE5JroSmt3t9egn2nOCybSJAtqQYSgnzGCMTgC+tnYeN8dwAAHH+eK9NIcT4p/3ytLeIEcOh33bx+5hA==}
+
+  '@iconify-json/carbon@1.1.34':
+    resolution: {integrity: sha512-azvhc5HP+CilSrzSEfP4MezsG5n4tj+vIJLADhqCbFM1BOAmyDe/K1lTL9GLDluybsCvSqb15+6AIRb1jtKhpQ==}
+
+  '@iconify/tailwind@1.1.1':
+    resolution: {integrity: sha512-4mmA//qjZigv7D4KlqcVSYTqfRIJzyts2/lSCAJfCL0rVMIE76+ifJnaE5jxCo1+nYGBF8FsFo0qFOs+sX4EnA==}
+
+  '@iconify/types@2.0.0':
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
 
   '@img/sharp-darwin-arm64@0.33.4':
     resolution: {integrity: sha512-p0suNqXufJs9t3RqLBO6vvrgr5OhgbWp76s5gTRvdmxmuv9E1rcaqGUsl3l4mKVmXPkTkTErXediAui4x+8PSA==}
@@ -2676,6 +2691,16 @@ snapshots:
   '@fontsource/ibm-plex-mono@5.0.13': {}
 
   '@fontsource/ibm-plex-sans-jp@5.0.13': {}
+
+  '@iconify-json/carbon@1.1.34':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify/tailwind@1.1.1':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify/types@2.0.0': {}
 
   '@img/sharp-darwin-arm64@0.33.4':
     optionalDependencies:

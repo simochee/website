@@ -1,5 +1,10 @@
-import { family as IBMPlexMono } from '@fontsource/ibm-plex-mono/metadata.json'
-import { family as IBMPlexSansJP } from '@fontsource/ibm-plex-sans-jp/metadata.json'
+const {
+	family: IBMPlexSansJP,
+} = require("@fontsource/ibm-plex-sans-jp/metadata.json");
+const {
+	family: IBMPlexMono,
+} = require("@fontsource/ibm-plex-mono/metadata.json");
+const { addDynamicIconSelectors } = require("@iconify/tailwind");
 
 /** @type {import('tailwindcss').Config} */
 const config = {
@@ -8,12 +13,13 @@ const config = {
 		extend: {},
 		fontFamily: {
 			sans: [IBMPlexSansJP, "sans-serif"],
-			mono: [IBMPlexMono, "monospace"]
-		}
+			mono: [IBMPlexMono, "monospace"],
+		},
 	},
 	plugins: [
 		require("@tailwindcss/typography"),
 		require("@digital-go-jp/tailwind-theme-plugin"),
+		addDynamicIconSelectors(),
 	],
 };
 

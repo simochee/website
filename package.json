@@ -19,6 +19,8 @@
 		"@digital-go-jp/tailwind-theme-plugin": "^0.1.15",
 		"@fontsource/ibm-plex-mono": "^5.0.13",
 		"@fontsource/ibm-plex-sans-jp": "^5.0.13",
+		"@iconify-json/carbon": "^1.1.34",
+		"@iconify/tailwind": "^1.1.1",
 		"@tailwindcss/typography": "^0.5.13",
 		"@types/node": "^20.14.2",
 		"autoprefixer": "^10.4.14",
