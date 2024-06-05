@@ -1,9 +1,3 @@
-const {
-	family: IBMPlexSansJP,
-} = require("@fontsource/ibm-plex-sans-jp/metadata.json");
-const {
-	family: IBMPlexMono,
-} = require("@fontsource/ibm-plex-mono/metadata.json");
 const { addDynamicIconSelectors } = require("@iconify/tailwind");
 
 /** @type {import('tailwindcss').Config} */
@@ -12,8 +6,8 @@ const config = {
 	theme: {
 		extend: {},
 		fontFamily: {
-			sans: [IBMPlexSansJP, "sans-serif"],
-			mono: [IBMPlexMono, "monospace"],
+			sans: ["sans-serif"],
+			mono: ["monospace"],
 		},
 	},
 	plugins: [
