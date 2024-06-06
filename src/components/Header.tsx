@@ -34,19 +34,19 @@ export default component$(() => {
 					))}
 				</nav>
 				<Modal.Root class="md:hidden">
-					<Modal.Trigger class="size-12">
-						<span class="icon-[carbon--menu] size-6" />
+					<Modal.Trigger class="grid size-12 place-items-center">
+						<span class="icon-[carbon--menu] block size-6" />
 					</Modal.Trigger>
 					<Modal.Panel class="mt-0 w-full">
 						<div class="flex h-16 items-center justify-between pr-4 pl-6">
 							<Modal.Title>
 								<img src={logo} alt={WEBSITE_NAME} width={152} height={24} />
 							</Modal.Title>
-							<Modal.Close class="size-12">
-								<span class="icon-[carbon--close] size-6" />
+							<Modal.Close class="grid size-12 place-items-center">
+								<span class="icon-[carbon--close] block size-6" />
 							</Modal.Close>
 						</div>
-						<nav class="grid gap-2 px-6 pb-8">
+						<nav class="grid gap-2 p-6">
 							{NAV_ITEMS.map(({ href, label }) => (
 								<a
 									key={label}
