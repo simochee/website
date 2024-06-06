@@ -15,7 +15,7 @@ export default component$(() => {
 
 	return (
 		<header class="sticky top-0 left-0 w-full bg-white bg-opacity-70 backdrop-blur-sm">
-			<div class="mx-auto flex h-16 max-w-6xl items-center justify-between pl-6 md:h-20 md:pr-6">
+			<div class="mx-auto flex h-16 max-w-6xl items-center justify-between pr-4 pl-6 md:h-20 md:pr-6">
 				<span class="grid grid-flow-col place-items-center gap-2 text-lg">
 					<img src={logo} alt={WEBSITE_NAME} width={152} height={24} />
 				</span>
@@ -34,15 +34,15 @@ export default component$(() => {
 					))}
 				</nav>
 				<Modal.Root class="md:hidden">
-					<Modal.Trigger class="size-16">
+					<Modal.Trigger class="size-12">
 						<span class="icon-[carbon--menu] size-6" />
 					</Modal.Trigger>
 					<Modal.Panel class="mt-0 w-full">
-						<div class="flex h-16 items-center justify-between pl-6">
+						<div class="flex h-16 items-center justify-between pr-4 pl-6">
 							<Modal.Title>
 								<img src={logo} alt={WEBSITE_NAME} width={152} height={24} />
 							</Modal.Title>
-							<Modal.Close class="size-16">
+							<Modal.Close class="size-12">
 								<span class="icon-[carbon--close] size-6" />
 							</Modal.Close>
 						</div>
