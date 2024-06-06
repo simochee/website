@@ -1,6 +1,6 @@
 # https://developers.cloudflare.com/pages/platform/headers/
 
-/*
+*
   Content-Security-Policy: default-src 'self'; image-src 'self' data:
   X-Powered-By: Qwik
 
