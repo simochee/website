@@ -15,7 +15,7 @@ export default component$(() => {
 
 	return (
 		<header class="sticky top-0 left-0 w-full bg-white bg-opacity-70 backdrop-blur-sm">
-			<div class="mx-auto flex h-16 max-w-6xl items-center justify-between pr-4 pl-6 md:h-20 md:pr-6">
+			<div class="mx-auto flex h-16 max-w-6xl items-center justify-between pr-2 pl-4 md:h-20 md:pr-6">
 				<span class="grid grid-flow-col place-items-center gap-2 text-lg">
 					<img src={logo} alt={WEBSITE_NAME} width={152} height={24} />
 				</span>
@@ -38,7 +38,7 @@ export default component$(() => {
 						<span class="icon-[carbon--menu] block size-6" />
 					</Modal.Trigger>
 					<Modal.Panel class="mt-0 w-full">
-						<div class="flex h-16 items-center justify-between pr-4 pl-6">
+						<div class="flex h-16 items-center justify-between pr-2 pl-4">
 							<Modal.Title>
 								<img src={logo} alt={WEBSITE_NAME} width={152} height={24} />
 							</Modal.Title>
@@ -46,7 +46,7 @@ export default component$(() => {
 								<span class="icon-[carbon--close] block size-6" />
 							</Modal.Close>
 						</div>
-						<nav class="grid gap-2 p-6">
+						<nav class="grid gap-2 p-4">
 							{NAV_ITEMS.map(({ href, label }) => (
 								<a
 									key={label}
