@@ -1,0 +1,19 @@
+{
+	"$schema": "https://json.schemastore.org/web-manifest-combined.json",
+	"name": "よなよなコード",
+	"short_name": "よなよなコード",
+	"start_url": ".",
+	"id": "/",
+	"display": "standalone",
+	"orientation": "any",
+	"theme_color": "#1a1a1c",
+	"background_color": "#ffffff",
+	"description": "しもちぃが夜な夜なコードを書いたポートフォリオサイトです。",
+	"icons": [
+		{
+			"src": "icon_512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
