@@ -38,15 +38,15 @@ importers:
       '@qwik-ui/headless':
         specifier: ^0.4.4
         version: 0.4.4(@builder.io/qwik@1.5.6(@types/node@20.14.2)(undici@6.18.2))
+      '@storybook/addon-actions':
+        specifier: ^8.1.10
+        version: 8.1.10
       '@storybook/addon-essentials':
         specifier: ^8.1.10
         version: 8.1.10(@types/react@18.3.3)(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/addon-interactions':
         specifier: ^8.1.10
         version: 8.1.10
-      '@storybook/addon-links':
-        specifier: ^8.1.10
-        version: 8.1.10(react@18.3.1)
       '@storybook/blocks':
         specifier: ^8.1.10
         version: 8.1.10(@types/react@18.3.3)(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1703,14 +1703,6 @@ packages:
 
   '@storybook/addon-interactions@8.1.10':
     resolution: {integrity: sha512-GGU66TxYv6Bis10mmlgMhLOyai1am1amKVvX7ML8XYfsi6lA9zCnfQSVXulYLfjfzyIR6Ld8Kxe5awvjucPxSw==}
-
-  '@storybook/addon-links@8.1.10':
-    resolution: {integrity: sha512-SxCuK7k7A0/qIPzV68u25qfye3Fb0PkC1izlRbt7u64wIUIxGzgfjM3dFRWK2VaJzCsEQWSmIdv7YHi7Wv5y3w==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
-    peerDependenciesMeta:
-      react:
-        optional: true
 
   '@storybook/addon-measure@8.1.10':
     resolution: {integrity: sha512-akhdg3WBOBvDsolzSSvW4TIdZLMVlL9DS6rpZvhydXeX8pG0sjb+sON6VUL4h8Gs7qa8QumauXCr+Y4q1FhZhw==}
@@ -7212,14 +7204,6 @@ snapshots:
       - '@types/jest'
       - jest
       - vitest
-
-  '@storybook/addon-links@8.1.10(react@18.3.1)':
-    dependencies:
-      '@storybook/csf': 0.1.9
-      '@storybook/global': 5.0.0
-      ts-dedent: 2.2.0
-    optionalDependencies:
-      react: 18.3.1
 
   '@storybook/addon-measure@8.1.10':
     dependencies:

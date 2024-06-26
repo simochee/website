@@ -6,9 +6,21 @@ type Story = StoryObj<Args>;
 
 const meta = {
 	component: Component,
+	argTypes: {
+		href: {
+			control: { type: "select" },
+			options: ["/", "/portfolio"],
+		},
+	},
 	args: {
-		href: "/",
-		children: "プロフィール",
+		children: "ポートフォリオ",
+	},
+	render({ children, ...props }) {
+		return (
+			<Component {...props} preventdefault:click>
+				{children}
+			</Component>
+		);
 	},
 } satisfies Meta<Args>;
 
@@ -16,22 +28,6 @@ export default meta;
 
 export const Primary: Story = {
 	args: {
-		href: "/blog",
-		children: "ブログ",
-	},
-
-	render({ children, ...props }) {
-		return <Component {...props}>{children}</Component>;
-	},
-};
-
-export const Active: Story = {
-	args: {
-		href: "/",
-		children: "プロフィール",
-	},
-
-	render({ children, ...props }) {
-		return <Component {...props}>{children}</Component>;
+		href: "/portfolio",
 	},
 };
