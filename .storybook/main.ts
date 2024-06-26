@@ -1,6 +1,12 @@
 import type { StorybookConfig } from "storybook-framework-qwik";
 
 const config: StorybookConfig = {
+	framework: {
+		name: "storybook-framework-qwik",
+	},
+	core: {
+		renderer: "storybook-framework-qwik",
+	},
 	stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
 	addons: [
 		"@storybook/addon-links",
@@ -9,8 +15,8 @@ const config: StorybookConfig = {
 		"@storybook/addon-interactions",
 		"storybook-zeplin/register",
 	],
-	framework: {
-		name: "storybook-framework-qwik",
+	docs: {
+		autodocs: "tag",
 	},
 };
 
