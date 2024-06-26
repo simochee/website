@@ -4,6 +4,10 @@
 /server
 .DS_Store
 .env.local
+*.log
+
+# Storybook
+/storybook-static
 
 # Cloudflare
 functions/**/*.js
