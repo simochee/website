@@ -1,22 +1,37 @@
-import { QwikCityMockProvider } from "@builder.io/qwik-city";
 import type { Meta, StoryObj } from "storybook-framework-qwik";
-import Component from ".";
+import Component, { type Props } from ".";
 
-const meta: Meta<typeof Component> = {
+type Args = Props & { children: string };
+type Story = StoryObj<Args>;
+
+const meta = {
 	component: Component,
-};
+	args: {
+		href: "/",
+		children: "プロフィール",
+	},
+} satisfies Meta<Args>;
 
 export default meta;
-type Story = StoryObj<typeof Component>;
 
 export const Primary: Story = {
 	args: {
-		href: "/",
-		children: "Hello World",
+		href: "/blog",
+		children: "ブログ",
 	},
-	render: () => (
-		<QwikCityMockProvider>
-			<Component href="foobar">Hello</Component>
-		</QwikCityMockProvider>
-	),
+
+	render({ children, ...props }) {
+		return <Component {...props}>{children}</Component>;
+	},
+};
+
+export const Active: Story = {
+	args: {
+		href: "/",
+		children: "プロフィール",
+	},
+
+	render({ children, ...props }) {
+		return <Component {...props}>{children}</Component>;
+	},
 };

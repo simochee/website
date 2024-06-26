@@ -1,5 +1,6 @@
 import type { Preview } from "storybook-framework-qwik";
 import { qwikCityDecorator } from "storybook-framework-qwik/qwik-city-decorator";
+import "../src/global.css";
 
 const preview: Preview = {
 	parameters: {

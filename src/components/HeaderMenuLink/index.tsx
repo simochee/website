@@ -1,7 +1,7 @@
 import { Slot, component$ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
 
-type Props = {
+export type Props = {
 	href: string;
 };
 

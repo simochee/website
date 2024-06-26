@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
 import { Modal } from "@qwik-ui/headless";
 import logo from "~assets/logo.svg";
+import HeaderMenuLink from "~components/HeaderMenuLink";
 import { WEBSITE_NAME } from "~constants";
 
 const NAV_ITEMS = [
@@ -21,16 +22,7 @@ export default component$(() => {
 				</span>
 				<nav class="hidden grid-flow-col gap-3 md:grid">
 					{NAV_ITEMS.map(({ href, label }) => (
-						<a
-							key={label}
-							href={href}
-							class={[
-								"rounded-full px-4 py-2 text-sm hover:font-bold",
-								{ "bg-wood-50 font-bold": url.pathname === href },
-							]}
-						>
-							{label}
-						</a>
+						<HeaderMenuLink href={href}>{label}</HeaderMenuLink>
 					))}
 				</nav>
 				<Modal.Root class="md:hidden">
