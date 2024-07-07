@@ -1,0 +1,20 @@
+{
+	"scripts": {
+		"build": "astro build",
+		"dev": "astro dev",
+		"postinstall": "lefthook install",
+		"preview": "astro preview"
+	},
+	"dependencies": {
+		"astro": "^4.11.5"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.8.3",
+		"lefthook": "^1.6.18",
+		"sort-package-json": "^2.10.0"
+	},
+	"packageManager": "pnpm@9.5.0-beta.3+sha256.820c521dcb1e9cf7844c4da772e6fb08adf8c013cce96848cd9ae90ca0ac6dfc",
+	"volta": {
+		"node": "22.4.0"
+	}
+}
