@@ -1,9 +1,5 @@
-/node_modules
-/tmp
-/dist
-/server
+.astro
+node_modules
+dist
 .DS_Store
-.env.local
-
-# Cloudflare
-functions/**/*.js
+.env*.local
