@@ -21,6 +21,9 @@ jobs:
       - run: corepack enable
       - run: nci
       - run: nr build
+        env:
+          ASTRO_SITE: https://simochee.github.io
+          ASTRO_BASE: website
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
