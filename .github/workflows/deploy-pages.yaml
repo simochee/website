@@ -23,7 +23,7 @@ jobs:
       - run: nr build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: storybook-static
+          path: dist
 
   deploy:
     needs: build
