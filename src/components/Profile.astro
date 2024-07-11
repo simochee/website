@@ -1,12 +1,16 @@
 ---
 import avatar from "~assets/avatar.webp";
 import { SITE } from "~config";
+import SocialNav from "./SocialNav.astro";
 ---
 
-<div class="grid grid-cols-[auto,1fr] gap-8 rounded-xl">
-  <img src={avatar.src} width={avatar.width} height={avatar.height} alt={SITE.NICK_NAME} class="rounded-full size-24 border-4 dark:border-zinc-800 border-zinc-200" />
-  <div class="flex flex-col justify-center gap-2">
-    <h1 class="text-2xl font-bold">{SITE.NICK_NAME}</h1>
-    <p class="text-zinc-500">{SITE.DESCRIPTION}</p>
+<div class="grid gap-6">
+  <div class="flex items-center gap-4">
+    <img src={avatar.src} width={avatar.width} height={avatar.height} alt={SITE.NICK_NAME} class="rounded-full size-10" />
+    <p class="text-2xl font-bold">{SITE.NICK_NAME}</p>
+  </div>
+  <p class="text-zinc-500">{SITE.DESCRIPTION}</p>
+  <div class="flex justify-end">
+    <SocialNav />
   </div>
 </div>

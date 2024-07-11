@@ -1,0 +1,34 @@
+---
+import { SOCIAL } from "~config";
+
+const SOCIAL_LINKS = [
+	{
+		href: SOCIAL.ZENN.URL,
+		alt: `Zenn @${SOCIAL.ZENN.ID}`,
+		icon: "icon-[self--logo-zenn]",
+	},
+	{
+		href: SOCIAL.QIITA.URL,
+		alt: `Qiita @${SOCIAL.QIITA.ID}`,
+		icon: "icon-[self--logo-qiita]",
+	},
+	{
+		href: SOCIAL.TWITTER.URL,
+		alt: `X @${SOCIAL.TWITTER.ID}`,
+		icon: "icon-[carbon--logo-x]",
+	},
+	{
+		href: SOCIAL.GITHUB.URL,
+		alt: `GitHub @${SOCIAL.GITHUB.ID}`,
+		icon: "icon-[carbon--logo-github]",
+	},
+] satisfies Array<{ href: string; alt: string; icon: string }>;
+---
+
+<nav class="grid place-items-center grid-flow-col gap-4">
+  {SOCIAL_LINKS.map(({ href, alt, icon }) => (
+    <a class="[&:not(:hover)]:text-zinc-500" href={href} data-label={alt} title={alt} target="_blank">
+      <span class:list={["size-6", icon]} />
+    </a>
+  ))}
+</nav>

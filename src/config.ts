@@ -4,7 +4,8 @@ export const SITE = {
 	SITEMAP_PATHNAME: "/sitemap-index.xml",
 	NICK_NAME: "simochee",
 	FULL_NAME: "Ryoya Tamura",
-	DESCRIPTION: "コードを書くのが好きなフロントエンドエンジニア。",
+	DESCRIPTION:
+		"コードを書くのが好きなフロントエンドエンジニア。チームラボにてフロントエンド領域のテックリードとして複数の案件に携わっています。",
 	NOW_WATCHING: {
 		TITLE: "しかのこのこのここしたんたん",
 		URL: "https://www.anime-shikanoko.jp/",
