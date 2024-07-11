@@ -9,6 +9,9 @@ export const SITE = {
 		TITLE: "しかのこのこのここしたんたん",
 		URL: "https://www.anime-shikanoko.jp/",
 	},
+};
+
+export const SOCIAL = {
 	TWITTER: {
 		ID: "lollipop_onl",
 		URL: "https://x.com/lollipop_onl",
@@ -25,4 +28,4 @@ export const SITE = {
 		ID: "simochee",
 		URL: "https://qiita.com/simochee",
 	},
-};
+} satisfies Record<string, { ID: string; URL: string }>;

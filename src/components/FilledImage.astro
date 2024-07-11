@@ -1,0 +1,10 @@
+---
+type Props = {
+	class: string;
+	image: ImageMetadata;
+	alt: string;
+};
+const { class: className, image, alt } = Astro.props;
+---
+
+<span class:list={[className]} aria-label={alt} style={{ width: `${image.width}px`, height: `${image.height}px`, maskImage: `url(${image.src})` }} />
