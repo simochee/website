@@ -1,0 +1,23 @@
+---
+import Footer from "~components/Footer.astro";
+import Header from "~components/Header.astro";
+import MetaTags from "~components/MetaTags.astro";
+---
+
+<!DOCTYPE html>
+<html class="motion-safe:scroll-smooth">
+<head>
+  <MetaTags />
+</head>
+<body class="antialiased bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white font-sans">
+  <div class="min-h-dvh pb-24">
+    <Header />
+    <div class="px-4 max-w-6xl mx-auto">
+      <slot />
+    </div>
+  </div>
+  <div class="border-t border-zinc-300 dark:border-zinc-700">
+    <Footer />
+  </div>
+</body>
+</html>

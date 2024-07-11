@@ -1,0 +1,44 @@
+---
+import { SITE } from "~config";
+
+const SOCIAL_LINKS = [
+	{
+		href: SITE.ZENN.URL,
+		alt: `Zenn @${SITE.ZENN.ID}`,
+		icon: "icon-[self--logo-zenn]",
+	},
+	{
+		href: SITE.QIITA.URL,
+		alt: `Qiita @${SITE.QIITA.ID}`,
+		icon: "icon-[self--logo-qiita]",
+	},
+	{
+		href: SITE.TWITTER.URL,
+		alt: `X @${SITE.TWITTER.ID}`,
+		icon: "icon-[carbon--logo-x]",
+	},
+	{
+		href: SITE.GITHUB.URL,
+		alt: `GitHub @${SITE.GITHUB.ID}`,
+		icon: "icon-[carbon--logo-github]",
+	},
+] satisfies Array<{ href: string; alt: string; icon: string }>;
+---
+
+<footer class="py-8">
+  <div class="mx-auto max-w-6xl px-6 flex justify-center md:justify-between items-center">
+    <p class="hidden md:block">
+      <a class="underline hover:no-underline  inline-flex items-center gap-1 [&:not(:hover)]:text-zinc-500" href={SITE.NOW_WATCHING.URL} target="_blank">
+        {SITE.NOW_WATCHING.TITLE}
+        <span class="icon-[carbon--launch] size-4" />
+      </a>
+    </p>
+    <nav class="grid place-items-center grid-flow-col gap-4">
+      {SOCIAL_LINKS.map(({ href, alt, icon }) => (
+        <a class="[&:not(:hover)]:text-zinc-500" href={href} data-label={alt} target="_blank">
+          <span class:list={["size-6", icon]} />
+        </a>
+      ))}
+    </nav>
+  </div>
+</footer>

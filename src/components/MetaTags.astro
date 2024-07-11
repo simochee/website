@@ -1,0 +1,48 @@
+---
+import type { ImageMetadata } from "astro";
+import ogImage from "~assets/ogp.png";
+import { SITE } from "~config";
+
+type Props = {
+	title?: string;
+	description?: string;
+	image?: string | ImageMetadata;
+	ogTitle?: string;
+	ogType?: string;
+};
+const {
+	title = SITE.TITLE,
+	description = "",
+	image = ogImage,
+	ogTitle = title,
+	ogType = "website",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, SITE.ORIGIN);
+const imageURL = new URL(
+	typeof image === "string" ? image : image.src,
+	SITE.ORIGIN,
+);
+---
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content={SITE.NICK_NAME}>
+
+<meta name="twitter:site" content={`@${SITE.TWITTER.ID}`}>
+<meta name="twitter:creator" content={`@${SITE.TWITTER.ID}`}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:card" content="summary">
+
+<link rel="sitemap" href={SITE.SITEMAP_PATHNAME}>
+<link rel="canonical" href={canonicalURL}>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<title>{title}</title>
+
+<meta property="og:title" content={ogTitle}>
+<meta property="og:type" content={ogType}>
+<meta property="og:url" content={canonicalURL}>
+<meta property="og:site_name" content={SITE.TITLE}>
+<meta property="og:description" content={description}>
+<meta property="og:image" content={imageURL}>
