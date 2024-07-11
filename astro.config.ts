@@ -7,7 +7,7 @@ import { SITE } from "./src/config";
 // https://astro.build/config
 export default defineConfig({
 	site: SITE.ORIGIN,
-	integrations: [tailwind(), sitemap()],
+	integrations: [tailwind({ applyBaseStyles: false }), sitemap()],
 	markdown: {},
 	vite: {
 		plugins: [tsconfigPaths()],
