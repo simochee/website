@@ -1,6 +1,9 @@
 ---
 import logo from "~assets/logo.svg";
 import { SITE } from "~config";
+import FilledImage from "./FilledImage.astro";
+
+console.log(logo);
 
 const NAV_ITEMS = [
 	// {
@@ -27,7 +30,7 @@ const NAV_ITEMS = [
 <header class="sticky top-0 left-0 w-full bg-white dark:bg-zinc-900 bg-opacity-50 dark:bg-opacity-50 backdrop-blur-sm">
   <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
     <a href="/" class="p-2 rounded">
-      <img src={logo.src} width={logo.width} height={logo.height} alt={SITE.TITLE} />
+      <FilledImage class="block bg-zinc-900 dark:bg-white" image={logo} alt={SITE.TITLE} />
     </a>
     <nav class="grid-flow-col hidden md:grid">
       {NAV_ITEMS.map(({ href, label }) => (
@@ -39,7 +42,7 @@ const NAV_ITEMS = [
         <span class="icon-[carbon--rss] size-5" />
       </a>
     </nav>
-    <button data-dialog="header__dialog" class="size-12 grid place-items-center hover:bg-zinc-200 dark:hover:bg-zinc-800 rounded-xl" aria-label="メニューを開く">
+    <button data-dialog="header__dialog" class="md:hidden size-12 grid place-items-center hover:bg-zinc-200 dark:hover:bg-zinc-800 rounded-xl" aria-label="メニューを開く">
       <span class="icon-[carbon--menu] size-8" />
     </button>
   </div>
