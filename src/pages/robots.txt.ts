@@ -3,7 +3,7 @@ import { SITE } from "~config";
 
 const ROBOTS_TXT = `
 User-agent: *
-Allow: /
+Disallow: /
 
 Sitemap: ${new URL(SITE.SITEMAP_PATHNAME, import.meta.env.SITE)}
 `.trim();

@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import Layout from "~layouts/Layout.astro";
+
+export const getStaticPaths = (async ({ paginate }) => {
+	const posts = await getCollection("blog");
+
+	return paginate(
+		posts.filter(({ data }) => data.draft === false),
+		{ pageSize: 10 },
+	);
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { page } = Astro.props;
+---
+
+<Layout>
+  <ol>
+  {page.data.map(({ data, slug }) => (
+    <li>
+      <a href={`/blog/${slug}`}>
+        {data.title}
+      </a>
+    </li>
+  ))}
+  </ol>
+</Layout>

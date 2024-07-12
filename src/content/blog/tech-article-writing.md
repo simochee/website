@@ -1,7 +1,5 @@
 ---
 title: 技術記事の書き方
-tags:
-  - ライティング
 draft: true
 ---
 

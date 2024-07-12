@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import Layout from "~layouts/Layout.astro";
+
+export const getStaticPaths = (async () => {
+	const posts = await getCollection("blog");
+
+	return posts
+		.filter(({ data }) => data.draft === false)
+		.map((post) => ({
+			params: {
+				slug: post.slug,
+			},
+			props: {
+				post,
+			},
+		}));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const {
+	post: { data, render },
+} = Astro.props;
+
+const { Content } = await render();
+---
+
+<Layout>
+  <h1>{data.title}</h1>
+  {data.pubDate && <time datetime={data.pubDate.toISOString()}>{Intl.DateTimeFormat('ja-JP').format(data.pubDate)}</time>}
+  <Content />
+</Layout>
