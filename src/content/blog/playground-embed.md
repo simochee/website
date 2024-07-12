@@ -1,6 +1,7 @@
 ---
 title: コンテンツ埋め込みテスト
 pubDate: 2023-09-08
+tags: [ブログ]
 draft: false
 ---
 

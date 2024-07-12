@@ -1,5 +1,6 @@
 ---
 title: 技術記事の書き方
+tags: [未分類]
 draft: true
 ---
 

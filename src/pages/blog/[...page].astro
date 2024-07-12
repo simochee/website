@@ -17,13 +17,26 @@ const { page } = Astro.props;
 ---
 
 <Layout>
-  <ol>
-  {page.data.map(({ data, slug }) => (
-    <li>
-      <a href={`/blog/${slug}`}>
-        {data.title}
-      </a>
-    </li>
-  ))}
-  </ol>
+  <div class="max-w-4xl px-4 pt-8">
+    <ol class="grid gap-6">
+    {page.data.map(({ data, slug }) => (
+      <li>
+        <a class="grid gap-2 border rounded-2xl border-zinc-200 bg-zinc-50 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:border-zinc-600 hover:bg-zinc-100 px-5 py-4" href={`/blog/${slug}`}>
+          <span class="text-sm">
+            {data.tags.map((tag) => (
+              <span class="inline-grid grid-flow-col place-items-center gap-1">
+                <span class="icon-[carbon--hashtag] size-4" />
+                {tag}
+              </span>
+            ))}
+          </span>
+          <span class="text-xl">{data.title}</span>
+          {data.pubDate && (
+            <time class="text-sm text-zinc-600 dark:text-zinc-400" datetime={data.pubDate.toISOString()}>{Intl.DateTimeFormat('ja-JP').format(data.pubDate)}</time>
+          )}
+        </a>
+      </li>
+    ))}
+    </ol>
+  </div>
 </Layout>

@@ -1,6 +1,7 @@
 ---
 title: 技術記事は誰が為にあるのか
 pubDate: 2023-09-07
+tags: [思想]
 draft: false
 ---
 

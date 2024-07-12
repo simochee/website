@@ -1,6 +1,7 @@
 ---
 title: GAS で Google カレンダーの「予定あり」「予定なし」を操作する
 pubDate: 2023-09-08
+tags: [Google Apps Script]
 draft: false
 ---
 
