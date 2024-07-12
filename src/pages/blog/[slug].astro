@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import Post from "~components/Post.astro";
 import Layout from "~layouts/Layout.astro";
 
 export const getStaticPaths = (async () => {
@@ -29,5 +30,9 @@ const { Content } = await render();
 <Layout>
   <h1>{data.title}</h1>
   {data.pubDate && <time datetime={data.pubDate.toISOString()}>{Intl.DateTimeFormat('ja-JP').format(data.pubDate)}</time>}
-  <Content />
+	<div class="pt-8">
+		<Post>
+			<Content />
+		</Post>
+	</div>
 </Layout>

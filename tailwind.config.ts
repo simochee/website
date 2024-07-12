@@ -1,4 +1,5 @@
 import { addDynamicIconSelectors } from "@iconify/tailwind";
+import typography from "@tailwindcss/typography";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -17,6 +18,7 @@ const config: Config = {
 		},
 	},
 	plugins: [
+		typography(),
 		addDynamicIconSelectors({
 			iconSets: {
 				self: "./src/assets/icon-sets/self.json",

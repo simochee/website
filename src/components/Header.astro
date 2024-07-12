@@ -30,9 +30,9 @@ const NAV_ITEMS = [
     <a href="/" class="p-2 rounded">
       <FilledImage class="block bg-zinc-900 dark:bg-white" image={logo} alt={SITE.TITLE} />
     </a>
-    <nav class="grid-flow-col hidden md:grid">
+    <nav class="grid-flow-col hidden md:grid gap-1">
       {NAV_ITEMS.map(({ href, label }) => (
-        <a class:list={["px-5 py-3 rounded-xl hover:bg-zinc-200 dark:hover:bg-zinc-800", Astro.url.pathname.startsWith(href) && 'font-bold bg-zinc-200 dark:bg-zinc-800']} href={href}>
+        <a class:list={["px-5 py-3 grid place-items-center rounded-xl hover:bg-zinc-200 dark:hover:bg-zinc-800", Astro.url.pathname.startsWith(href) && 'font-bold bg-zinc-200 dark:bg-zinc-800']} href={href}>
           {label}
         </a>
       ))}

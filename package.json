@@ -17,6 +17,7 @@
 		"@biomejs/biome": "^1.8.3",
 		"@iconify-json/carbon": "^1.1.36",
 		"@iconify/tailwind": "^1.1.1",
+		"@tailwindcss/typography": "^0.5.13",
 		"@types/node": "^20.14.10",
 		"astro": "^4.11.5",
 		"lefthook": "^1.6.18",
