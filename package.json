@@ -8,6 +8,9 @@
 		"preview": "astro preview",
 		"start": "astro dev --open"
 	},
+	"dependencies": {
+		"@astrojs/rss": "^4.0.7"
+	},
 	"devDependencies": {
 		"@astrojs/sitemap": "^3.1.6",
 		"@astrojs/tailwind": "^5.1.0",
