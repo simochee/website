@@ -20,6 +20,7 @@
 		"sort-package-json": "^2.14.0",
 		"typescript": "^5.7.3",
 		"vite": "^6.1.0",
-		"vite-tsconfig-paths": "^5.1.4"
+		"vite-tsconfig-paths": "^5.1.4",
+		"wrangler": "^3.109.1"
 	}
 }
