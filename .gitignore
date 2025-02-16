@@ -1,9 +1,0 @@
-/node_modules
-/tmp
-/dist
-/server
-.DS_Store
-.env.local
-
-# Cloudflare
-functions/**/*.js
