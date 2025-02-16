@@ -1,0 +1,10 @@
+{
+    "extends": "@tsconfig/vite-react",
+    "compilerOptions": {
+        "jsxImportSource": "@builder.io/qwik",
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["./src/*"]
+        }
+    }
+}
