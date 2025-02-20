@@ -31,7 +31,7 @@ importers:
         version: 1.2.7
       '@iconify/tailwind':
         specifier: ^1.1.1
-        version: 1.1.1
+        version: 1.2.0
       '@qwik-ui/headless':
         specifier: ^0.4.4
         version: 0.4.4(@builder.io/qwik@1.12.0(vite@5.2.13(@types/node@20.14.2)))
@@ -558,8 +558,8 @@ packages:
   '@iconify-json/carbon@1.2.7':
     resolution: {integrity: sha512-nqEjicnNdb3CnY21MsTr9DfU8JBkP9C8hup1bCe4zvpLKjcU9YRmYChUbqZYBP4P+BL5NdrprTSN+B7qJg3H3Q==}
 
-  '@iconify/tailwind@1.1.1':
-    resolution: {integrity: sha512-4mmA//qjZigv7D4KlqcVSYTqfRIJzyts2/lSCAJfCL0rVMIE76+ifJnaE5jxCo1+nYGBF8FsFo0qFOs+sX4EnA==}
+  '@iconify/tailwind@1.2.0':
+    resolution: {integrity: sha512-KgpIHWOTcRYw1XcoUqyNSrmYyfLLqZYu3AmP8zdfLk0F5TqRO8YerhlvlQmGfn7rJXgPeZN569xPAJnJ53zZxA==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2681,7 +2681,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/tailwind@1.1.1':
+  '@iconify/tailwind@1.2.0':
     dependencies:
       '@iconify/types': 2.0.0
 
