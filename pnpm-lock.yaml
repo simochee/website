@@ -16,7 +16,7 @@ importers:
         version: 1.12.1(vite@5.2.13(@types/node@20.17.19))
       '@builder.io/qwik-city':
         specifier: ^1.5.5
-        version: 1.12.0(acorn@8.14.0)(rollup@4.18.0)(typescript@5.4.5)(vite@5.2.13(@types/node@20.17.19))
+        version: 1.12.1(acorn@8.14.0)(rollup@4.18.0)(typescript@5.4.5)(vite@5.2.13(@types/node@20.17.19))
       '@commitlint/cli':
         specifier: ^19.3.0
         version: 19.7.1(@types/node@20.17.19)(typescript@5.4.5)
@@ -133,8 +133,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@builder.io/qwik-city@1.12.0':
-    resolution: {integrity: sha512-jMPh/M1a0lfGtWlpwD6RYJv48+33G/o/p4fTheg1wlNnYNH3O30/mLNaoT5k4nLd++tKm47iDmdwQK1wgB6fFQ==}
+  '@builder.io/qwik-city@1.12.1':
+    resolution: {integrity: sha512-YLW+33PZVoc4O30J99Fs3uNNpi7BszPzaITKoW66Sphju5Ptn6HDQkfnBu2sHFB0bh8hWLWatAjOM1HXg/C96Q==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
     peerDependencies:
       vite: ^5
@@ -2348,7 +2348,7 @@ snapshots:
   '@biomejs/cli-win32-x64@1.9.4':
     optional: true
 
-  '@builder.io/qwik-city@1.12.0(acorn@8.14.0)(rollup@4.18.0)(typescript@5.4.5)(vite@5.2.13(@types/node@20.17.19))':
+  '@builder.io/qwik-city@1.12.1(acorn@8.14.0)(rollup@4.18.0)(typescript@5.4.5)(vite@5.2.13(@types/node@20.17.19))':
     dependencies:
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       '@types/mdx': 2.0.13
