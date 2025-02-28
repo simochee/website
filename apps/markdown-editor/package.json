@@ -4,7 +4,8 @@
 	"type": "module",
 	"scripts": {
 		"build": "vite build",
-		"dev": "wrangler pages dev --local --compatibility-date=2025-02-28 -- vite"
+		"dev": "vite --port 4301",
+		"preview": "pnpm run build && wrangler pages dev dist --port 4301 --compatibility-date=2025-02-28"
 	},
 	"dependencies": {
 		"@catppuccin/vscode": "^3.16.1",
