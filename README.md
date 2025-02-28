@@ -1,3 +1,0 @@
-# simochee.net
-
-simochee のポートフォリオサイト。
