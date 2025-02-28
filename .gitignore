@@ -4,5 +4,5 @@
 node_modules/
 dist/
 *.local
-dev.vars
+.dev.vars
 routeTree.gen.ts
