@@ -5,7 +5,9 @@
 	"scripts": {
 		"build": "vite build",
 		"dev": "vite --port 4301",
-		"preview": "pnpm run build && wrangler pages dev dist --port 4301 --compatibility-date=2025-02-28"
+		"preview": "run-p -l preview:*",
+		"preview:cf": "wrangler pages dev dist --port 4301 --compatibility-date=2025-02-28",
+		"preview:vite": "pnpm run build --watch -l error"
 	},
 	"dependencies": {
 		"@catppuccin/vscode": "catalog:",
@@ -34,6 +36,7 @@
 		"@types/react-dom": "catalog:",
 		"@vitejs/plugin-react": "catalog:",
 		"monaco-editor": "catalog:",
+		"npm-run-all2": "^7.0.2",
 		"tailwindcss": "catalog:",
 		"vite": "catalog:",
 		"vite-tsconfig-paths": "catalog:",
