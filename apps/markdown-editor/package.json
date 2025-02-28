@@ -1,0 +1,41 @@
+{
+	"name": "markdown-editor",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"dev": "wrangler pages dev --local --compatibility-date=2025-02-28 -- vite"
+	},
+	"dependencies": {
+		"@catppuccin/vscode": "^3.16.1",
+		"@fontsource/ibm-plex-mono": "^5.1.1",
+		"@fontsource/ibm-plex-sans-jp": "^5.1.1",
+		"@monaco-editor/react": "^4.7.0",
+		"@shikijs/monaco": "^3.1.0",
+		"@tanstack/react-router": "^1.111.11",
+		"clsx": "^2.1.1",
+		"hono": "^4.7.2",
+		"microcms-field-extension-api": "^1.0.0",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"react-icons": "^5.5.0",
+		"react-remark": "^2.1.0",
+		"react-use": "^17.6.0",
+		"shiki": "^3.1.0"
+	},
+	"devDependencies": {
+		"@tailwindcss/typography": "^0.5.16",
+		"@tailwindcss/vite": "^4.0.9",
+		"@tanstack/router-devtools": "^1.111.11",
+		"@tanstack/router-plugin": "^1.111.12",
+		"@tsconfig/vite-react": "^3.4.0",
+		"@types/react": "^19.0.10",
+		"@types/react-dom": "^19.0.4",
+		"@vitejs/plugin-react": "^4.3.4",
+		"monaco-editor": "^0.52.2",
+		"tailwindcss": "^4.0.9",
+		"vite": "^6.2.0",
+		"vite-tsconfig-paths": "^5.1.4",
+		"wrangler": "^3.110.0"
+	}
+}
