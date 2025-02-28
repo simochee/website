@@ -1,5 +1,7 @@
 packages:
   - apps/*
   - packages/*
-
-catalog:
+catalog: null
+onlyBuiltDependencies:
+  - '@biomejs/biome'
+  - lefthook
