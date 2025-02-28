@@ -6,10 +6,10 @@
 		"postinstall": "lefthook install"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"lefthook": "^1.11.2",
-		"sort-package-json": "^2.15.0",
-		"turbo": "^2.4.4"
+		"@biomejs/biome": "catalog:",
+		"lefthook": "catalog:",
+		"sort-package-json": "catalog:",
+		"turbo": "catalog:"
 	},
 	"packageManager": "pnpm@10.5.2"
 }
