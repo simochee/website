@@ -41,12 +41,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen p-8">
-      <main className="max-w-4xl mx-auto">
+      <main className="max-w-4xl mx-auto glass-effect rounded-2xl p-8 neon-glow">
         {/* Introduction */}
         <section className="py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Hello, I'm <span className="text-blue-600">Ryoya Tamura</span></h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Hello, I'm <span style={{color: 'var(--color-primary)'}}>Ryoya Tamura</span></h1>
               <p className="text-xl text-gray-600 mb-6">
                 Passionate developer with a love for creating amazing digital experiences
               </p>
@@ -70,13 +70,15 @@ export default function Home() {
               <div className="flex gap-4">
                 <Link
                   href="/portfolio"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="px-6 py-3 rounded-lg transition-colors text-white"
+                  style={{background: 'var(--color-secondary)', boxShadow: '0 0 20px rgba(255, 61, 157, 0.3)'}}
                 >
                   View Portfolio
                 </Link>
                 <Link
                   href="/blog"
-                  className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+                  className="px-6 py-3 rounded-lg transition-colors"
+                  style={{border: '2px solid var(--color-accent)', color: 'var(--color-accent)', background: 'rgba(139, 92, 246, 0.1)'}}
                 >
                   Read Blog
                 </Link>
@@ -103,7 +105,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {skills.map((skillGroup) => (
               <div key={skillGroup.category} className="text-center">
-                <h3 className="text-xl font-semibold mb-4 text-blue-600">
+                <h3 className="text-xl font-semibold mb-4" style={{color: 'var(--color-primary)'}}>
                   {skillGroup.category}
                 </h3>
                 <div className="space-y-2">
@@ -126,10 +128,10 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-8 text-center">Experience</h2>
           <div className="space-y-8">
             {experience.map((job, index) => (
-              <div key={index} className="border-l-4 border-blue-600 pl-6">
+              <div key={index} className="border-l-4 pl-6" style={{borderColor: 'var(--color-secondary)'}}>
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
                   <h3 className="text-xl font-semibold">{job.title}</h3>
-                  <span className="text-blue-600 font-medium">{job.period}</span>
+                  <span className="font-medium" style={{color: 'var(--color-accent)'}}>{job.period}</span>
                 </div>
                 <h4 className="text-lg text-gray-600 mb-3">{job.company}</h4>
                 <p className="text-gray-700 leading-relaxed">{job.description}</p>
@@ -173,7 +175,7 @@ export default function Home() {
         </section>
 
         {/* Contact CTA */}
-        <section className="text-center py-16 bg-gray-50 rounded-lg">
+        <section className="text-center py-16 rounded-lg" style={{background: 'linear-gradient(45deg, rgba(0, 229, 204, 0.1), rgba(255, 61, 157, 0.1))'}}>
           <h2 className="text-3xl font-bold mb-4">Let's Work Together</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             I'm always interested in new opportunities and exciting projects. 
@@ -182,7 +184,8 @@ export default function Home() {
           <div className="flex gap-4 justify-center">
             <a
               href="mailto:simochee@gmail.com"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              className="text-white px-6 py-3 rounded-lg transition-colors"
+              style={{background: 'var(--color-primary)', boxShadow: '0 0 20px rgba(0, 229, 204, 0.3)'}}
             >
               Send Email
             </a>
@@ -190,7 +193,8 @@ export default function Home() {
               href="https://linkedin.com/in/simochee"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              className="px-6 py-3 rounded-lg transition-colors"
+              style={{border: '2px solid var(--color-secondary)', color: 'var(--color-secondary)', background: 'rgba(255, 61, 157, 0.1)'}}
             >
               LinkedIn
             </a>
@@ -198,7 +202,8 @@ export default function Home() {
               href="https://github.com/simochee"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              className="px-6 py-3 rounded-lg transition-colors"
+              style={{border: '2px solid var(--color-accent)', color: 'var(--color-accent)', background: 'rgba(139, 92, 246, 0.1)'}}
             >
               GitHub
             </a>

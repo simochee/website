@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav className="border-b glass-effect sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-8 py-4">
             <div className="flex justify-between items-center">
               <Link href="/" className="text-xl font-bold">
@@ -49,7 +49,7 @@ export default function RootLayout({
           </div>
         </nav>
         {children}
-        <footer className="border-t bg-gray-50 mt-16">
+        <footer className="border-t glass-effect mt-16">
           <div className="max-w-6xl mx-auto px-8 py-12">
             <div className="text-center">
               <p className="text-gray-600 mb-4">

@@ -67,7 +67,7 @@ export default function PortfolioPage() {
 
   return (
     <div className="min-h-screen p-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto glass-effect rounded-2xl p-8 neon-glow">
         <header className="text-center py-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Portfolio</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -96,7 +96,8 @@ export default function PortfolioPage() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
+                        className="text-sm px-3 py-1 rounded-full text-white"
+                        style={{background: 'var(--color-secondary)'}}
                       >
                         {tech}
                       </span>
@@ -108,7 +109,8 @@ export default function PortfolioPage() {
                       href={`https://github.com/simochee/${project.github}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline font-medium"
+                      className="hover:underline font-medium"
+                      style={{color: 'var(--color-primary)'}}
                     >
                       View Code →
                     </a>
@@ -116,7 +118,8 @@ export default function PortfolioPage() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline font-medium"
+                      className="hover:underline font-medium"
+                      style={{color: 'var(--color-accent)'}}
                     >
                       Live Demo →
                     </a>
@@ -151,7 +154,8 @@ export default function PortfolioPage() {
                     {project.technologies.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
+                        className="text-xs px-2 py-1 rounded-full text-white"
+                        style={{background: 'var(--color-primary)'}}
                       >
                         {tech}
                       </span>
@@ -168,7 +172,8 @@ export default function PortfolioPage() {
                       href={`https://github.com/simochee/${project.github}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline"
+                      className="hover:underline"
+                      style={{color: 'var(--color-secondary)'}}
                     >
                       Code
                     </a>
@@ -176,7 +181,8 @@ export default function PortfolioPage() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline"
+                      className="hover:underline"
+                      style={{color: 'var(--color-accent)'}}
                     >
                       Demo
                     </a>

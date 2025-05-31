@@ -27,7 +27,7 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen p-8">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto glass-effect rounded-2xl p-8 neon-glow">
         <header className="text-center py-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Blog</h1>
           <p className="text-xl text-gray-600">
@@ -42,7 +42,8 @@ export default function BlogPage() {
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
+                    className="text-sm px-3 py-1 rounded-full text-white"
+                    style={{background: 'var(--color-accent)'}}
                   >
                     {tag}
                   </span>
@@ -72,7 +73,8 @@ export default function BlogPage() {
                 </time>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="text-blue-600 hover:underline font-medium"
+                  className="hover:underline font-medium"
+                  style={{color: 'var(--color-primary)'}}
                 >
                   Read more →
                 </Link>

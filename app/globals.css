@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary: #00E5CC; /* Teal from avatar */
+  --color-secondary: #FF3D9D; /* Pink from avatar background */
+  --color-accent: #8B5CF6; /* Purple from avatar outfit */
+  --color-yellow: #FBBF24; /* Yellow star */
 }
 
 @theme inline {
@@ -20,7 +24,28 @@
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(135deg, #FF3D9D 0%, #8B5CF6 50%, #00E5CC 100%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.neon-glow {
+  box-shadow: 0 0 30px rgba(0, 229, 204, 0.4);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
