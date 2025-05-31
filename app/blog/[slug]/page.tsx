@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBlogDetail, type Blog } from "@/lib/microcms";
+import { markdownToHtml } from "@/lib/markdown";
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -17,6 +18,15 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   if (!post) {
     notFound();
   }
+
+  // Check if content is markdown (simple heuristic: starts with # or contains markdown syntax)
+  const isMarkdown = post.body.trim().startsWith('#') || 
+                     post.body.includes('```') || 
+                     post.body.includes('**') ||
+                     post.body.includes('##');
+  
+  // Convert markdown to HTML if needed
+  const contentHtml = isMarkdown ? await markdownToHtml(post.body) : post.body;
 
   return (
     <div className="min-h-screen p-8">
@@ -55,7 +65,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <div
               className="blog-content"
               dangerouslySetInnerHTML={{
-                __html: post.body
+                __html: contentHtml
               }}
             />
           </div>
