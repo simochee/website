@@ -1,29 +1,15 @@
 import Link from "next/link";
+import { getBlogList, type Blog } from "@/lib/microcms";
 
-export default function BlogPage() {
-  const posts = [
-    {
-      slug: "getting-started-with-nextjs",
-      title: "Getting Started with Next.js",
-      excerpt: "Learn how to build modern web applications with Next.js and React.",
-      date: "2024-03-15",
-      tags: ["Next.js", "React", "JavaScript"]
-    },
-    {
-      slug: "typescript-best-practices",
-      title: "TypeScript Best Practices",
-      excerpt: "Essential TypeScript patterns and practices for better code quality.",
-      date: "2024-03-10",
-      tags: ["TypeScript", "Development", "Best Practices"]
-    },
-    {
-      slug: "tailwind-css-tips",
-      title: "Tailwind CSS Pro Tips",
-      excerpt: "Advanced techniques to make the most of Tailwind CSS in your projects.",
-      date: "2024-03-05",
-      tags: ["Tailwind CSS", "CSS", "Design"]
-    }
-  ];
+export default async function BlogPage() {
+  let posts: Blog[] = [];
+  
+  try {
+    const response = await getBlogList({ limit: 10 });
+    posts = response.contents;
+  } catch (error) {
+    console.error('Failed to fetch blog posts:', error);
+  }
 
   return (
     <div className="min-h-screen p-8">
@@ -36,49 +22,55 @@ export default function BlogPage() {
         </header>
 
         <div className="grid gap-8">
-          {posts.map((post) => (
-            <article key={post.slug} className="border rounded-lg p-8 hover:shadow-lg transition-shadow">
-              <div className="flex flex-wrap gap-2 mb-4">
-                {post.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-avatar-purple text-white text-sm px-3 py-1 rounded-full"
+          {posts.length > 0 ? (
+            posts.map((post) => (
+              <article key={post.id} className="border rounded-lg p-8 hover:shadow-lg transition-shadow">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {post.tags?.map((tag) => (
+                    <span
+                      key={tag.id}
+                      className="bg-avatar-purple text-white text-sm px-3 py-1 rounded-full"
+                    >
+                      {tag.name}
+                    </span>
+                  ))}
+                </div>
+                
+                <h2 className="text-2xl font-bold mb-3">
+                  <Link
+                    href={`/blog/${post.id}`}
+                    className="hover:text-blue-600 transition-colors"
                   >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              
-              <h2 className="text-2xl font-bold mb-3">
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="hover:text-blue-600 transition-colors"
-                >
-                  {post.title}
-                </Link>
-              </h2>
-              
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                {post.excerpt}
-              </p>
-              
-              <div className="flex justify-between items-center">
-                <time className="text-sm text-gray-500">
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric"
-                  })}
-                </time>
-                <Link
-                  href={`/blog/${post.slug}`}
-                  className="text-avatar-teal hover:underline font-medium"
-                >
-                  Read more →
-                </Link>
-              </div>
-            </article>
-          ))}
+                    {post.title}
+                  </Link>
+                </h2>
+                
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {post.excerpt || (post.content ? post.content.replace(/<[^>]*>/g, '').substring(0, 200) + '...' : 'No excerpt available')}
+                </p>
+                
+                <div className="flex justify-between items-center">
+                  <time className="text-sm text-gray-500">
+                    {new Date(post.publishedAt).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric"
+                    })}
+                  </time>
+                  <Link
+                    href={`/blog/${post.id}`}
+                    className="text-avatar-teal hover:underline font-medium"
+                  >
+                    Read more →
+                  </Link>
+                </div>
+              </article>
+            ))
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-gray-600">No blog posts found.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -1,8 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import avatar from "@/assets/avatar.png";
+import { getBlogList, type Blog } from "@/lib/microcms";
 
-export default function Home() {
+export default async function Home() {
+  let recentPosts: Blog[] = [];
+  
+  try {
+    const response = await getBlogList({ limit: 2 });
+    recentPosts = response.contents;
+  } catch (error) {
+    console.error('Failed to fetch recent blog posts:', error);
+  }
   const skills = [
     {
       category: "Frontend",
@@ -157,18 +166,35 @@ export default function Home() {
         <section className="py-16">
           <h2 className="text-3xl font-bold mb-8 text-center">Latest Blog Posts</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {[1, 2].map((i) => (
-              <article key={i} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold mb-2">Blog Post {i}</h3>
-                <p className="text-gray-600 mb-4">An interesting article about development, design, or technology.</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-500">March {i}, 2024</span>
-                  <Link href="/blog" className="text-blue-600 hover:underline">
-                    Read more →
-                  </Link>
-                </div>
-              </article>
-            ))}
+            {recentPosts.length > 0 ? (
+              recentPosts.map((post) => (
+                <article key={post.id} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
+                  <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
+                  <p className="text-gray-600 mb-4">
+                    {post.excerpt || (post.content ? post.content.replace(/<[^>]*>/g, '').substring(0, 100) + '...' : 'No excerpt available')}
+                  </p>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-gray-500">
+                      {new Date(post.publishedAt).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric"
+                      })}
+                    </span>
+                    <Link href={`/blog/${post.id}`} className="text-avatar-teal hover:underline">
+                      Read more →
+                    </Link>
+                  </div>
+                </article>
+              ))
+            ) : (
+              <div className="col-span-2 text-center py-8">
+                <p className="text-gray-600">No recent blog posts found.</p>
+                <Link href="/blog" className="text-avatar-teal hover:underline mt-2 inline-block">
+                  View all posts →
+                </Link>
+              </div>
+            )}
           </div>
         </section>
 
