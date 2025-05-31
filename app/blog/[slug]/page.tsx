@@ -30,16 +30,13 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
         <article>
           <header className="mb-12">
-            <div className="flex flex-wrap gap-2 mb-4">
-              {post.tags?.map((tag) => (
-                <span
-                  key={tag.id}
-                  className="bg-avatar-purple text-white text-sm px-3 py-1 rounded-full"
-                >
-                  {tag.name}
+            {post.category && (
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-avatar-purple text-white text-sm px-3 py-1 rounded-full">
+                  {post.category.name}
                 </span>
-              ))}
-            </div>
+              </div>
+            )}
             
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               {post.title}
@@ -58,7 +55,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <div
               className="blog-content"
               dangerouslySetInnerHTML={{
-                __html: post.content
+                __html: post.body
               }}
             />
           </div>

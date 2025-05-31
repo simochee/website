@@ -20,10 +20,11 @@ This is a portfolio and blog website built with Next.js 15 App Router, TypeScrip
 - **Blog Posts (`/blog/[slug]`)** - Dynamic blog post pages with hardcoded sample content
 
 ### Content Management
-- **Blog posts** are currently hardcoded in `/app/blog/[slug]/page.tsx` with sample content for:
-  - `getting-started-with-nextjs`
-  - `typescript-best-practices` 
-  - `tailwind-css-tips`
+- **Blog posts** are fetched from microCMS using the `blog-posts` endpoint
+  - Schema: `{ id, title, body, category?, createdAt, updatedAt, publishedAt, revisedAt }`
+  - Content field is `body` (not `content`)
+  - Uses `category` object (not `tags` array)
+  - microCMS client in `/lib/microcms.ts`
 - **Portfolio projects** are hardcoded in `/app/portfolio/page.tsx` with sample data
 - **Personal information** (skills, experience) is hardcoded in homepage data arrays
 

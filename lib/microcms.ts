@@ -16,18 +16,21 @@ export const client = createClient({
 export type Blog = {
   id: string;
   title: string;
-  content: string;
-  excerpt?: string;
-  tags?: Tag[];
-  publishedAt: string;
+  body: string;
+  category?: Category;
+  createdAt: string;
   updatedAt: string;
+  publishedAt: string;
   revisedAt: string;
 };
 
-export type Tag = {
+export type Category = {
   id: string;
   name: string;
-  color?: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
 };
 
 export type BlogResponse = {

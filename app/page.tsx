@@ -171,7 +171,7 @@ export default async function Home() {
                 <article key={post.id} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
                   <p className="text-gray-600 mb-4">
-                    {post.excerpt || (post.content ? post.content.replace(/<[^>]*>/g, '').substring(0, 100) + '...' : 'No excerpt available')}
+                    {post.body ? post.body.replace(/<[^>]*>/g, '').substring(0, 100) + '...' : 'No content available'}
                   </p>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-500">

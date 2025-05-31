@@ -25,16 +25,13 @@ export default async function BlogPage() {
           {posts.length > 0 ? (
             posts.map((post) => (
               <article key={post.id} className="border rounded-lg p-8 hover:shadow-lg transition-shadow">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {post.tags?.map((tag) => (
-                    <span
-                      key={tag.id}
-                      className="bg-avatar-purple text-white text-sm px-3 py-1 rounded-full"
-                    >
-                      {tag.name}
+                {post.category && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="bg-avatar-purple text-white text-sm px-3 py-1 rounded-full">
+                      {post.category.name}
                     </span>
-                  ))}
-                </div>
+                  </div>
+                )}
                 
                 <h2 className="text-2xl font-bold mb-3">
                   <Link
@@ -46,7 +43,7 @@ export default async function BlogPage() {
                 </h2>
                 
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  {post.excerpt || (post.content ? post.content.replace(/<[^>]*>/g, '').substring(0, 200) + '...' : 'No excerpt available')}
+                  {post.body ? post.body.replace(/<[^>]*>/g, '').substring(0, 200) + '...' : 'No content available'}
                 </p>
                 
                 <div className="flex justify-between items-center">
