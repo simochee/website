@@ -42,8 +42,7 @@ export default function BlogPage() {
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-sm px-3 py-1 rounded-full text-white"
-                    style={{background: 'var(--color-accent)'}}
+                    className="bg-avatar-purple text-white text-sm px-3 py-1 rounded-full"
                   >
                     {tag}
                   </span>
@@ -73,8 +72,7 @@ export default function BlogPage() {
                 </time>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="hover:underline font-medium"
-                  style={{color: 'var(--color-primary)'}}
+                  className="text-avatar-teal hover:underline font-medium"
                 >
                   Read more →
                 </Link>

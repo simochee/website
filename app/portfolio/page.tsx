@@ -96,8 +96,7 @@ export default function PortfolioPage() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="text-sm px-3 py-1 rounded-full text-white"
-                        style={{background: 'var(--color-secondary)'}}
+                        className="bg-avatar-pink text-white text-sm px-3 py-1 rounded-full"
                       >
                         {tech}
                       </span>
@@ -109,8 +108,7 @@ export default function PortfolioPage() {
                       href={`https://github.com/simochee/${project.github}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline font-medium"
-                      style={{color: 'var(--color-primary)'}}
+                      className="text-avatar-teal hover:underline font-medium"
                     >
                       View Code →
                     </a>
@@ -118,8 +116,7 @@ export default function PortfolioPage() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline font-medium"
-                      style={{color: 'var(--color-accent)'}}
+                      className="text-avatar-purple hover:underline font-medium"
                     >
                       Live Demo →
                     </a>
@@ -154,8 +151,7 @@ export default function PortfolioPage() {
                     {project.technologies.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs px-2 py-1 rounded-full text-white"
-                        style={{background: 'var(--color-primary)'}}
+                        className="bg-avatar-teal text-white text-xs px-2 py-1 rounded-full"
                       >
                         {tech}
                       </span>
@@ -172,8 +168,7 @@ export default function PortfolioPage() {
                       href={`https://github.com/simochee/${project.github}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline"
-                      style={{color: 'var(--color-secondary)'}}
+                      className="text-avatar-pink hover:underline"
                     >
                       Code
                     </a>
@@ -181,8 +176,7 @@ export default function PortfolioPage() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline"
-                      style={{color: 'var(--color-accent)'}}
+                      className="text-avatar-purple hover:underline"
                     >
                       Demo
                     </a>

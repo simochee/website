@@ -44,3 +44,9 @@ This is a portfolio and blog website built with Next.js 15 App Router, TypeScrip
 - All routes are statically generated except dynamic blog posts
 - TypeScript params in dynamic routes require `Promise<>` wrapper for Next.js 15
 - Sample content includes placeholder images and links that need customization
+
+### Guidelines and Restrictions
+- Don't generate tailwind.config.js
+
+## Memory Log
+- Using TailwindCSS v4 features

@@ -151,8 +151,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       <div className="max-w-3xl mx-auto glass-effect rounded-2xl p-8 neon-glow">
         <Link
           href="/blog"
-          className="inline-flex items-center hover:underline mb-8"
-          style={{color: 'var(--color-primary)'}}
+          className="inline-flex items-center text-avatar-teal hover:underline mb-8"
         >
           ← Back to Blog
         </Link>
@@ -163,8 +162,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-sm px-3 py-1 rounded-full text-white"
-                  style={{background: 'var(--color-accent)'}}
+                  className="bg-avatar-purple text-white text-sm px-3 py-1 rounded-full"
                 >
                   {tag}
                 </span>
