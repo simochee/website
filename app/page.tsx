@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import avatar from "@/assets/avatar.png";
 
 export default function Home() {
   const skills = [
@@ -44,7 +46,7 @@ export default function Home() {
         <section className="py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Hello, I'm <span className="text-blue-600">[Your Name]</span></h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Hello, I'm <span className="text-blue-600">Ryoya Tamura</span></h1>
               <p className="text-xl text-gray-600 mb-6">
                 Passionate developer with a love for creating amazing digital experiences
               </p>
@@ -81,8 +83,15 @@ export default function Home() {
               </div>
             </div>
             <div className="lg:text-center">
-              <div className="w-64 h-64 bg-gray-200 rounded-full mx-auto flex items-center justify-center">
-                <span className="text-gray-500">Your Photo</span>
+              <div className="w-64 h-64 rounded-full mx-auto overflow-hidden">
+                <Image 
+                  src={avatar}
+                  alt="Ryoya Tamura" 
+                  width={256}
+                  height={256}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -172,13 +181,13 @@ export default function Home() {
           </p>
           <div className="flex gap-4 justify-center">
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:simochee@gmail.com"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Send Email
             </a>
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://linkedin.com/in/simochee"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
@@ -186,7 +195,7 @@ export default function Home() {
               LinkedIn
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/simochee"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"

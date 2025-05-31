@@ -6,7 +6,7 @@ export default function PortfolioPage() {
       description: "A full-stack e-commerce solution built with Next.js, TypeScript, and Stripe integration. Features include user authentication, product management, and payment processing.",
       image: "/placeholder-project.jpg",
       technologies: ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL"],
-      github: "https://github.com/username/ecommerce",
+      github: "ecommerce",
       demo: "https://demo-ecommerce.vercel.app",
       featured: true
     },
@@ -16,7 +16,7 @@ export default function PortfolioPage() {
       description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
       image: "/placeholder-project.jpg",
       technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Tailwind CSS"],
-      github: "https://github.com/username/task-manager",
+      github: "task-manager",
       demo: "https://task-manager-demo.vercel.app",
       featured: true
     },
@@ -26,7 +26,7 @@ export default function PortfolioPage() {
       description: "A responsive weather dashboard that displays current conditions, forecasts, and interactive maps using external weather APIs.",
       image: "/placeholder-project.jpg",
       technologies: ["Vue.js", "Chart.js", "OpenWeather API", "CSS Grid"],
-      github: "https://github.com/username/weather-dashboard",
+      github: "weather-dashboard",
       demo: "https://weather-dashboard-demo.vercel.app",
       featured: false
     },
@@ -36,7 +36,7 @@ export default function PortfolioPage() {
       description: "A modern, responsive portfolio website built with Next.js and Tailwind CSS. Features dark mode, smooth animations, and optimized performance.",
       image: "/placeholder-project.jpg",
       technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "MDX"],
-      github: "https://github.com/username/portfolio",
+      github: "portfolio",
       demo: "https://portfolio-demo.vercel.app",
       featured: false
     },
@@ -46,7 +46,7 @@ export default function PortfolioPage() {
       description: "A headless content management system for blogs with a rich text editor, image uploads, and SEO optimization features.",
       image: "/placeholder-project.jpg",
       technologies: ["Next.js", "Sanity CMS", "React Hook Form", "Vercel"],
-      github: "https://github.com/username/blog-cms",
+      github: "blog-cms",
       demo: "https://blog-cms-demo.vercel.app",
       featured: false
     },
@@ -56,7 +56,7 @@ export default function PortfolioPage() {
       description: "An interactive data visualization tool that helps users create charts and graphs from CSV data with export capabilities.",
       image: "/placeholder-project.jpg",
       technologies: ["D3.js", "React", "Papa Parse", "Canvas API"],
-      github: "https://github.com/username/data-viz",
+      github: "data-viz",
       demo: "https://data-viz-demo.vercel.app",
       featured: false
     }
@@ -105,7 +105,7 @@ export default function PortfolioPage() {
                   
                   <div className="flex gap-4">
                     <a
-                      href={project.github}
+                      href={`https://github.com/simochee/${project.github}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:underline font-medium"
@@ -165,7 +165,7 @@ export default function PortfolioPage() {
                   
                   <div className="flex gap-3 text-sm">
                     <a
-                      href={project.github}
+                      href={`https://github.com/simochee/${project.github}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:underline"

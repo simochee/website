@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name - Developer Portfolio",
-  description: "Portfolio and blog of a passionate developer",
+  title: "Ryoya Tamura - Developer Portfolio",
+  description: "Portfolio and blog of Ryoya Tamura (@simochee)",
 };
 
 export default function RootLayout({
@@ -32,7 +32,7 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-8 py-4">
             <div className="flex justify-between items-center">
               <Link href="/" className="text-xl font-bold">
-                Your Name
+                Ryoya Tamura
               </Link>
               <div className="flex gap-6">
                 <Link href="/" className="hover:text-blue-600 transition-colors">
@@ -53,11 +53,11 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-8 py-12">
             <div className="text-center">
               <p className="text-gray-600 mb-4">
-                © 2024 Your Name. All rights reserved.
+                © 2024 Ryoya Tamura. All rights reserved.
               </p>
               <div className="flex justify-center gap-6">
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/simochee"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -65,7 +65,7 @@ export default function RootLayout({
                   GitHub
                 </a>
                 <a
-                  href="https://linkedin.com/in/yourprofile"
+                  href="https://linkedin.com/in/simochee"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -73,7 +73,7 @@ export default function RootLayout({
                   LinkedIn
                 </a>
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:simochee@gmail.com"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
                   Email
