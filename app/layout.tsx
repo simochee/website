@@ -28,20 +28,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className="border-b glass-effect sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto px-8 py-4">
+        <nav className="border-b glass-effect-strong sticky top-0 z-50 shadow-lg">
+          <div className="max-w-6xl mx-auto px-8 py-5">
             <div className="flex justify-between items-center">
-              <Link href="/" className="text-xl font-bold">
+              <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-avatar-pink to-avatar-purple bg-clip-text text-transparent">
                 Ryoya Tamura
               </Link>
-              <div className="flex gap-6">
-                <Link href="/" className="hover:text-blue-600 transition-colors">
+              <div className="flex gap-8">
+                <Link href="/" className="font-semibold text-gray-800 hover:text-avatar-pink transition-all duration-200 relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-avatar-pink after:transition-all after:duration-200 hover:after:w-full">
                   Home
                 </Link>
-                <Link href="/portfolio" className="hover:text-blue-600 transition-colors">
+                <Link href="/portfolio" className="font-semibold text-gray-800 hover:text-avatar-purple transition-all duration-200 relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-avatar-purple after:transition-all after:duration-200 hover:after:w-full">
                   Portfolio
                 </Link>
-                <Link href="/blog" className="hover:text-blue-600 transition-colors">
+                <Link href="/blog" className="font-semibold text-gray-800 hover:text-avatar-teal transition-all duration-200 relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-avatar-teal after:transition-all after:duration-200 hover:after:w-full">
                   Blog
                 </Link>
               </div>
