@@ -21,7 +21,7 @@
 		"@iconify/tailwind": "^1.1.1",
 		"@qwik-ui/headless": "^0.4.4",
 		"@tailwindcss/typography": "^0.5.13",
-		"@types/node": "^20.14.2",
+		"@types/node": "^22.0.0",
 		"autoprefixer": "^10.4.19",
 		"lefthook": "^1.6.15",
 		"postcss": "^8.4.38",
@@ -33,6 +33,6 @@
 	},
 	"packageManager": "pnpm@9.15.9",
 	"volta": {
-		"node": "22.14.0"
+		"node": "22.18.0"
 	}
 }
