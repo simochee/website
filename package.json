@@ -16,7 +16,7 @@
 		"@builder.io/qwik-city": "^1.5.5",
 		"@commitlint/cli": "^19.3.0",
 		"@commitlint/config-conventional": "^19.2.2",
-		"@digital-go-jp/tailwind-theme-plugin": "^0.1.15",
+		"@digital-go-jp/tailwind-theme-plugin": "^0.3.0",
 		"@iconify-json/carbon": "^1.1.34",
 		"@iconify/tailwind": "^1.1.1",
 		"@qwik-ui/headless": "^0.4.4",
