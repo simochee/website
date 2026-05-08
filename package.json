@@ -11,7 +11,7 @@
 		"serve": "wrangler pages dev ./dist --compatibility-flags=nodejs_als"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.8.0",
+		"@biomejs/biome": "^2.0.0",
 		"@builder.io/qwik": "^1.5.5",
 		"@builder.io/qwik-city": "^1.5.5",
 		"@commitlint/cli": "^19.3.0",
