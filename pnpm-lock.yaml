@@ -24,8 +24,8 @@ importers:
         specifier: ^19.2.2
         version: 19.8.1
       '@digital-go-jp/tailwind-theme-plugin':
-        specifier: ^0.1.15
-        version: 0.1.15(tailwindcss@3.4.19)
+        specifier: ^2.0.0
+        version: 2.0.0(tailwindcss@3.4.19)
       '@iconify-json/carbon':
         specifier: ^1.1.34
         version: 1.2.29
@@ -274,11 +274,10 @@ packages:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
     engines: {node: '>=12'}
 
-  '@digital-go-jp/tailwind-theme-plugin@0.1.15':
-    resolution: {integrity: sha512-SIC7vroLX1ZWDDcU6lxF8TUXNNk/KmO9MxtwXQa19dQX1ksd+K9bSDKDA3sSCjr63BLXxMLLzRUf01xurPoRIw==}
-    engines: {node: '>=18'}
+  '@digital-go-jp/tailwind-theme-plugin@2.0.0':
+    resolution: {integrity: sha512-u77xBcxBshOhV75dN/1W5eVA0R0Ko0lGwni1jnG+fN7dP1TMycmFyDsvNfiWzKCCxg2+bFRINvBjnXloLUEfHQ==}
     peerDependencies:
-      tailwindcss: ^3.4.3
+      tailwindcss: ^3.4.17 || ^4.0.0
 
   '@emnapi/runtime@1.10.0':
     resolution: {integrity: sha512-ewvYlk86xUoGI0zQRNq/mC+16R1QeDlKQy21Ki3oSYXNgLb45GV1P6A0M+/s6nyCuNDqe5VpaY84BzXGwVbwFA==}
@@ -2582,7 +2581,7 @@ snapshots:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
 
-  '@digital-go-jp/tailwind-theme-plugin@0.1.15(tailwindcss@3.4.19)':
+  '@digital-go-jp/tailwind-theme-plugin@2.0.0(tailwindcss@3.4.19)':
     dependencies:
       tailwindcss: 3.4.19
 
